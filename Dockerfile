@@ -2,7 +2,7 @@
 FROM centos:latest
 
 #create repo file
-RUN echo -e "[MLOPScontainer1] baseurl=https://download.docker.com/linux/centos/7/x86_64/stable/ gpgcheck=0 baseurl=http://mirror.centos.org/centos/7/os/x86_64/ gpgcheck=0 baseurl=http://mirror.centos.org/centos-8/8/BaseOS/x86_64/os/ gpgcheck=0 baseurl=http://mirror.centos.org/centos-7/7/os/x86_64/ gpgcheck=0 baseurl=http://mirror.centos.org/centos/ gpgcheck=0" >> etc/yum.repos.d/docker.repo"
+RUN echo -e "[MLOPScontainer1] baseurl=https://download.docker.com/linux/centos/7/x86_64/stable/ gpgcheck=0 baseurl=http://mirror.centos.org/centos/7/os/x86_64/ gpgcheck=0 baseurl=http://mirror.centos.org/centos-8/8/BaseOS/x86_64/os/ gpgcheck=0 baseurl=http://mirror.centos.org/centos-7/7/os/x86_64/ gpgcheck=0 baseurl=http://mirror.centos.org/centos/ gpgcheck=0 >> etc/yum.repos.d/docker.repo"
 
 #install centos
 RUN echo -e "yum install -y docker-ce --nobest"
@@ -23,10 +23,10 @@ CMD ["java", "-jar", "/usr/lib/jenkins/jenkins.war"]
 EXPOSE 9001
 
 #install git
-RUN yum install git -y && yum install bc -y
+#RUN yum install git -y && yum install bc -y
 
 #install other ML Libraries
-RUN pip install tensorflow
-RUN pip install keras
-RUN pip install matplotlib
-RUN pip install numpy
+#RUN pip install tensorflow
+#RUN pip install keras
+#RUN pip install matplotlib
+#RUN pip install numpy
