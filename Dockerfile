@@ -22,6 +22,8 @@ CMD ["java", "-jar", "/usr/lib/jenkins/jenkins.war"]
 
 EXPOSE 9001
 
+
+#this image only for jenkins and docker so removing below
 #install git
 #RUN yum install git -y && yum install bc -y
 
